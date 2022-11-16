@@ -39,6 +39,15 @@ body {
   font-weight: 400;
 }
 
+.header-container {
+  padding-bottom: 104px;
+  background: url(../images/bg-tablet-pattern.svg),
+    url(../images/bg-tablet-pattern.svg);
+  background-size: 120vw 120vw, 80vw 80vw;
+  background-position: 16vw -44vw, 62vw 116vw;
+  background-repeat: no-repeat, no-repeat;
+}
+
 .nav-bar {
   position: relative;
   padding: 0 5%;
@@ -61,10 +70,13 @@ body {
 
 .getstarted-btn {
   padding: 8px 20px;
+  font-size: 0.8em;
+  font-weight: 700;
   color: var(--very-light-gray);
   background-color: var(--bright-red);
   border: none;
-  border-radius: 24px;
+  border-radius: 28px;
+  box-shadow: 0 4px 6px 0 hsla(12, 88%, 59%, 0.4);
 }
 
 .ham-btn {
@@ -95,4 +107,21 @@ body {
 
 .nav-bar .getstarted-btn {
   display: none;
+}
+
+.intro-header {
+  padding: 0 5%;
+  color: var(--dark-grayish-blue);
+  text-align: center;
+}
+
+.intro-header .text-content {
+}
+
+.intro-header .paragraph {
+  padding: 0 8%;
+}
+
+.intro-header .title {
+  color: var(--very-dark-blue);
 }
