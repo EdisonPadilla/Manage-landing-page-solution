@@ -1,0 +1,99 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --bright-red: hsl(12, 88%, 59%);
+  --dark-blue: hsl(228, 39%, 23%);
+
+  /* ### Neutral */
+
+  --dark-grayish-blue: hsl(227, 12%, 61%);
+  --very-dark-blue: hsl(233, 12%, 13%);
+  --very-pale-red: hsl(13, 100%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+}
+
+.nav-bar {
+  position: relative;
+  padding: 0 5%;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: brown;
+}
+
+.nav-bar .logo {
+  width: 100px;
+  min-width: 100px;
+}
+
+.nav-bar .nav-menu {
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+
+.getstarted-btn {
+  padding: 8px 20px;
+  color: var(--very-light-gray);
+  background-color: var(--bright-red);
+  border: none;
+  border-radius: 24px;
+}
+
+.ham-btn {
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.ham-btn img {
+  display: block;
+  width: 24px;
+  height: 18px;
+}
+
+.ham-icon {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.nav-bar .getstarted-btn {
+  display: none;
+}
