@@ -125,3 +125,52 @@ body {
 .intro-header .title {
   color: var(--very-dark-blue);
 }
+
+.about-manage {
+  padding: 8px 0 72px 0;
+  color: var(--dark-blue);
+  /* text-align: center; */
+}
+
+.header-about-manage .title {
+  margin-top: 0;
+  color: var(--very-dark-blue);
+  text-align: center;
+}
+
+.header-about-manage p {
+  margin-bottom: 52px;
+  padding: 0 8%;
+  text-align: center;
+}
+
+.about-manage article {
+  padding-left: 5%;
+}
+
+.article-about-manage:not(:last-of-type) {
+  margin-bottom: 42px;
+}
+
+.about-manage .article-title {
+  margin-top: 0;
+  padding: 8px 0;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+  background-color: var(--very-pale-red);
+  border-radius: 28px 0 0 28px;
+}
+
+.article-title .number {
+  margin-right: 8px;
+  padding: 8px 24px;
+  /* height: 100%; */
+  color: var(--very-light-gray);
+  background-color: var(--bright-red);
+  border-radius: 28px;
+}
+
+.article-about-manage .text {
+  margin-bottom: 0;
+  padding-right: 4%;
+}
