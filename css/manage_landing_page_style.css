@@ -32,6 +32,11 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   font-size: 16px;
@@ -246,4 +251,75 @@ body {
 .simplify-container .getstarted-btn {
   color: var(--bright-red);
   background-color: var(--very-light-gray);
+}
+
+footer {
+  padding: 48px 5% 32px 5%;
+  color: var(--very-light-gray);
+  background-color: var(--very-dark-blue);
+}
+
+.footer-form {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.footer-form .input-updates {
+  padding-left: 12px;
+  /* height: 100%; */
+  min-width: 150px;
+  /* flex-basis: 150px; */
+  flex: 3;
+  border: thin solid transparent;
+  border-radius: 24px;
+}
+
+.footer-form .go-btn {
+  padding: 8px 0;
+  /* width: 12%; */
+  min-width: 60px;
+  flex: 1;
+  font-weight: 700;
+  color: var(--very-light-gray);
+  border-radius: 24px;
+  border: thin solid var(--bright-red);
+  background-color: var(--bright-red);
+}
+
+.footer-menu {
+  margin: 48px 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 32%;
+}
+
+.footer-menu .part-1,
+.footer-menu .part-2 {
+  line-height: 2;
+}
+
+.social-media-list {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 8px; */
+}
+
+.social-media-list .fa-brands {
+  font-size: 28px;
+}
+
+footer .logo {
+  margin: 0 auto 32px auto;
+  display: block;
+}
+
+footer .copyright {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 0.8em;
+  color: var(--dark-grayish-blue);
 }

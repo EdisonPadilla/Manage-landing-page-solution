@@ -26,6 +26,15 @@
       rel="stylesheet"
     />
 
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>Frontend Mentor | Manage landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -172,32 +181,51 @@
         <button type="submit" class="getstarted-btn">Get Started</button>
       </section>
       <footer>
-        <form action="#">
+        <form class="footer-form" action="#">
           <input
             type="text"
+            class="input-updates"
             name=""
             id=""
             placeholder="Updates in your inbox…"
           />
-          <button type="submit">GO</button>
+          <button type="submit" class="go-btn">GO</button>
         </form>
-        <ul class="menu">
-          <li>Home</li>
-          <li>Pricing</li>
-          <li>Products</li>
-          <li>About Us</li>
-          <li>Careers</li>
-          <li>Community</li>
-          <li>Privacy Policy</li>
+        <ul class="footer-menu">
+          <li>
+            <ul class="part-1">
+              <li><a href="">Home</a></li>
+              <li><a href="">Pricing</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="">About Us</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="part-2">
+              <li><a href="">Careers</a></li>
+              <li><a href="">Community</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="social-media-list">
-          <li>face</li>
-          <li>youtube</li>
-          <li>twitter</li>
-          <li>pinterest</li>
-          <li>instagram</li>
+          <li>
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-pinterest"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
         </ul>
-        <img src="./images/logo.svg" alt="" />
+        <img src="./images/white-logo.svg" class="logo" alt="" />
         <p class="copyright">Copyright 2020. All Rights Reserved</p>
       </footer>
     </main>
