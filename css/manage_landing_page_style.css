@@ -174,3 +174,57 @@ body {
   margin-bottom: 0;
   padding-right: 4%;
 }
+
+.testimonial-container {
+  padding: 0 5% 32px 5%;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+.testimonial-container .title {
+  margin-top: 0;
+  margin-bottom: 82px;
+  color: var(--very-dark-blue);
+}
+
+.testimonial-articles-box {
+  margin-bottom: 16px;
+}
+
+.testimony-box {
+  position: relative;
+  padding: 56px 5% 16px 5%;
+  margin-top: 20px;
+  background-color: var(--very-light-gray);
+}
+
+.testimony-box .user-photo {
+  position: absolute;
+  top: -40px;
+  left: 40%;
+  width: 80px;
+  height: 80px;
+}
+
+.testimony-box .user-name {
+  margin-top: 0;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.slider-button-box {
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.slider-button-box .slider-btn {
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border: thin solid var(--bright-red);
+  background-color: transparent;
+  border-radius: 50%;
+}
