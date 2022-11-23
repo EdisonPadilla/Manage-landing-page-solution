@@ -228,3 +228,22 @@ body {
   background-color: transparent;
   border-radius: 50%;
 }
+
+.simplify-container {
+  padding: 72px 5%;
+  text-align: center;
+  color: var(--very-light-gray);
+  background: url(../images/bg-simplify-section-mobile.svg), var(--bright-red);
+  background-position: 0px center, center;
+  background-repeat: no-repeat;
+}
+
+.simplify-container .title {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+.simplify-container .getstarted-btn {
+  color: var(--bright-red);
+  background-color: var(--very-light-gray);
+}
