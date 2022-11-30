@@ -143,7 +143,7 @@ body {
   text-align: center;
 }
 
-.header-about-manage p {
+.header-about-manage > p {
   margin-bottom: 52px;
   padding: 0 8%;
   text-align: center;
@@ -371,5 +371,35 @@ footer .copyright {
     padding-left: 0;
     /* padding-right: 32%; */
     padding-right: 12vw;
+  }
+
+  .about-manage {
+    padding-left: 8%;
+    padding-right: 8%;
+    display: flex;
+  }
+
+  .header-about-manage .title {
+    padding-right: 10vw;
+    text-align: left;
+  }
+
+  .header-about-manage > p {
+    padding-left: 0;
+    padding-right: 12vw;
+    text-align: left;
+  }
+
+  .about-manage article {
+    padding-left: 0;
+  }
+
+  .about-manage .article-title {
+    background-color: transparent;
+  }
+
+  .article-about-manage .text {
+    padding-left: 74px;
+    padding-right: 0;
   }
 }
