@@ -434,4 +434,25 @@ footer .copyright {
   .testimony-box .user-photo {
     left: 42%;
   }
+
+  .simplify-container {
+    padding-left: 8%;
+    padding-right: 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    background: url(../images/bg-simplify-section-desktop.svg),
+      var(--bright-red);
+    background-position: 16vw -8vw, center;
+    background-repeat: no-repeat;
+  }
+
+  .simplify-container .title {
+    margin-bottom: 0;
+  }
+
+  .simplify-container .getstarted-btn {
+    justify-self: flex-end;
+    align-self: center;
+  }
 }
