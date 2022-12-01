@@ -332,6 +332,14 @@ footer .copyright {
     background-repeat: no-repeat;
   }
 
+  main {
+    background: url(../images/bg-tablet-pattern.svg);
+    background-size: 50vw 50vw;
+    background-position: -32vw 14vw;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
   .nav-bar {
     padding: 0 8%;
     height: 16vh;
@@ -399,7 +407,31 @@ footer .copyright {
   }
 
   .article-about-manage .text {
-    padding-left: 74px;
+    padding-left: 78px;
     padding-right: 0;
+  }
+
+  .testimonial-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .testimonial-articles-box {
+    display: flex;
+    /* flex: 4; */
+    gap: 18px;
+    transform: translateX(-112px);
+  }
+
+  .testimony-box {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 8px;
+    /* width: 1000px; */
+    min-width: 512px;
+  }
+
+  .testimony-box .user-photo {
+    left: 42%;
   }
 }
