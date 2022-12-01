@@ -455,4 +455,52 @@ footer .copyright {
     justify-self: flex-end;
     align-self: center;
   }
+
+  footer {
+    padding-left: 8%;
+    padding-right: 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 2fr 1fr; */
+  }
+
+  .footer-form {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: start;
+  }
+
+  .footer-menu {
+    margin: 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: flex-start;
+  }
+
+  .social-media-list {
+    margin: 0;
+    width: 152px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+    justify-content: space-between;
+  }
+
+  .social-media-list .fa-brands {
+    font-size: 20px;
+  }
+
+  footer .logo {
+    margin: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: start;
+  }
+
+  .copyright {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: end;
+  }
 }
