@@ -3,7 +3,7 @@
 
   /* ### Primary */
 
-  --bright-red: hsl(12, 88%, 59%);
+  --bright-red: #f25f3a;
   --dark-blue: hsl(228, 39%, 23%);
 
   /* ### Neutral */
@@ -216,6 +216,10 @@ body {
   padding: 0 8%;
 }
 
+main {
+  overflow: hidden;
+}
+
 .about-manage {
   padding: 8px 0 72px 0;
   color: var(--dark-blue);
@@ -279,12 +283,16 @@ body {
 
 .testimonial-articles-box {
   margin-bottom: 16px;
+  display: flex;
+  gap: 5%;
+  transition: all 600ms;
 }
 
 .testimony-box {
   position: relative;
   padding: 56px 5% 16px 5%;
   margin-top: 20px;
+  min-width: 100%;
   background-color: var(--very-light-gray);
 }
 
@@ -317,6 +325,11 @@ body {
   border: thin solid var(--bright-red);
   background-color: transparent;
   border-radius: 50%;
+  transition: all 300ms;
+}
+
+.slider-button-box .slider-btn.selected {
+  background-color: var(--bright-red);
 }
 
 .simplify-container {
