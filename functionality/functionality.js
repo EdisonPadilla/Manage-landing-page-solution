@@ -7,20 +7,16 @@ const $close_icon = d.querySelector(".close-icon");
 const menu = d.querySelector(".nav-menu");
 const $menu_background = d.querySelector(".menu-box-background");
 const $testimonial_articles_box = d.querySelector(".testimonial-articles-box");
+const $slider_back_button = d.querySelector(".back-btn");
+const $slider_advanced_button = d.querySelector(".advanced-btn");
 const $slider_buttons = d.querySelectorAll(".slider-btn");
-const $slider_offset_value = 105;
-
-console.log($menu_button);
-console.log($ham_icon);
-console.log($close_icon);
-console.log(menu);
-console.log($menu_background);
-console.log($testimonial_articles_box);
-console.log($slider_buttons);
+const $slider_offset_value = 104;
+let windowWidth = d.documentElement.clientWidth;
 
 $menu_button.addEventListener("click", () => {
   $ham_icon.classList.toggle("clicked");
   $close_icon.classList.toggle("clicked");
+
   menu.classList.toggle("clicked");
   $menu_background.classList.toggle("clicked");
 });
@@ -28,10 +24,42 @@ $menu_button.addEventListener("click", () => {
 $slider_buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
     let offsetValue = $slider_offset_value * index;
+    $testimonial_articles_box.style.transform = `translateX(-${offsetValue}%)`;
+
     Array.from($slider_buttons).map((btn) => btn.classList.remove("selected"));
     button.classList.add("selected");
-    $testimonial_articles_box.style.transform = `translateX(-${offsetValue}%)`;
   });
 });
+
+if (windowWidth >= 1024) {
+  console.info("The window is equal to or greater than 1024px");
+
+  let offsetValueDesktop = 0;
+  let testimonialBoxWidth = $testimonial_articles_box.scrollWidth;
+  let displacementLimitValue = testimonialBoxWidth - windowWidth + 36;
+  // console.log("Displacement limit Value: ", displacementLimitValue);
+
+  $slider_back_button.addEventListener("click", () => {
+    offsetValueDesktop += 20;
+
+    if (offsetValueDesktop <= displacementLimitValue) {
+      $testimonial_articles_box.style.transform = `translateX(-${offsetValueDesktop}px)`;
+    } else {
+      $testimonial_articles_box.style.transform = `translateX(-${displacementLimitValue}px)`;
+      offsetValueDesktop = displacementLimitValue;
+    }
+  });
+
+  $slider_advanced_button.addEventListener("click", () => {
+    offsetValueDesktop -= 20;
+
+    if (offsetValueDesktop >= 0) {
+      $testimonial_articles_box.style.transform = `translateX(-${offsetValueDesktop}px)`;
+    } else {
+      $testimonial_articles_box.style.transform = `translateX(0px)`;
+      offsetValueDesktop = 0;
+    }
+  });
+}
 
 $slider_buttons[0].classList.add("selected");
