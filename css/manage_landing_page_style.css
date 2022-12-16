@@ -113,7 +113,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  color: var(--very-dark-blue);
+  color: var(--dark-blue);
   text-align: center;
   background-color: var(--very-light-gray);
   border-radius: 4px;
@@ -127,6 +127,14 @@ body {
   clip-path: inset(0 0 0 0);
 }
 
+.nav-menu .link {
+  transition: all 300ms;
+}
+
+.nav-menu .link:hover {
+  color: var(--dark-grayish-blue);
+}
+
 .getstarted-btn {
   padding: 8px 20px;
   font-size: 0.8em;
@@ -136,6 +144,11 @@ body {
   border: none;
   border-radius: 28px;
   box-shadow: 0 4px 6px 0 hsla(12, 88%, 59%, 0.4);
+  transition: all 300ms;
+}
+
+.getstarted-btn:hover {
+  background-color: #f89074;
 }
 
 .ham-btn {
@@ -332,6 +345,11 @@ main {
 .simplify-container .getstarted-btn {
   color: var(--bright-red);
   background-color: var(--very-light-gray);
+  transition: all 300ms;
+}
+
+.simplify-container .getstarted-btn:hover {
+  color: #f89074;
 }
 
 footer {
@@ -341,6 +359,7 @@ footer {
 }
 
 .footer-form {
+  position: relative;
   display: flex;
   align-items: stretch;
   gap: 6px;
@@ -350,8 +369,39 @@ footer {
   padding-left: 12px;
   min-width: 150px;
   flex: 3;
+  color: var(--bright-red);
   border: thin solid transparent;
   border-radius: 24px;
+  outline: none;
+}
+
+.footer-form .input-updates::placeholder {
+  color: var(--very-dark-blue);
+}
+
+.footer-form .input-updates:focus {
+  border-color: var(--bright-red);
+}
+
+.footer-form .input-updates.error {
+  border-color: var(--bright-red);
+}
+
+.footer-form .error-msg {
+  position: absolute;
+  top: 100%;
+  left: 16px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-weight: lighter;
+  font-size: 10px;
+  color: var(--bright-red);
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.footer-form .error-msg.show {
+  opacity: 1;
 }
 
 .footer-form .go-btn {
@@ -361,8 +411,13 @@ footer {
   font-weight: 700;
   color: var(--very-light-gray);
   border-radius: 24px;
-  border: thin solid var(--bright-red);
+  border: none;
   background-color: var(--bright-red);
+  transition: all 300ms;
+}
+
+.footer-form .go-btn:hover {
+  background-color: #f89074;
 }
 
 .footer-menu {
@@ -382,6 +437,16 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.footer-menu .link,
+.social-media-list .link {
+  transition: all 300ms;
+}
+
+.footer-menu .link:hover,
+.social-media-list .link:hover {
+  color: var(--bright-red);
 }
 
 .social-media-list .fa-brands {

@@ -11,7 +11,16 @@ const $slider_back_button = d.querySelector(".back-btn");
 const $slider_advanced_button = d.querySelector(".advanced-btn");
 const $slider_buttons = d.querySelectorAll(".slider-btn");
 const $slider_offset_value = 104;
+const $email = d.querySelector(".input-updates");
+const $go_button = d.querySelector(".footer-form .go-btn");
+const $error_message = d.querySelector(".footer-form .error-msg");
 let windowWidth = d.documentElement.clientWidth;
+
+function validateMail(email) {
+  let pattern =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return pattern.test(email) ? true : false;
+}
 
 $menu_button.addEventListener("click", () => {
   $ham_icon.classList.toggle("clicked");
@@ -62,4 +71,18 @@ if (windowWidth >= 1024) {
   });
 }
 
+$go_button.addEventListener("click", (e) => {
+  console.log("valor de email: ", $email.value);
+  console.log(validateMail($email.value));
+  if (validateMail($email.value)) {
+    $error_message.classList.remove("show");
+    $email.classList.remove("error");
+  } else {
+    $error_message.classList.add("show");
+    $email.classList.add("error");
+  }
+  e.preventDefault();
+});
+
 $slider_buttons[0].classList.add("selected");
+$email.value = "";
