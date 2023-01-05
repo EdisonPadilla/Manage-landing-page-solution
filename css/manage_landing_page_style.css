@@ -55,7 +55,8 @@ body {
 
 .nav-bar {
   position: relative;
-  padding: 0 4%;
+  padding-left: 4%;
+  padding-right: 4%;
   height: 8vh;
   display: flex;
   justify-content: space-between;
@@ -193,12 +194,10 @@ body {
 }
 
 .intro-header {
-  padding: 0 4%;
-  color: var(--dark-grayish-blue);
+  padding-left: 4%;
+  padding-right: 4%;
+  color: var(--dark-blue);
   text-align: center;
-}
-
-.intro-header .text-content {
 }
 
 .intro-header .title {
@@ -206,7 +205,8 @@ body {
 }
 
 .intro-header .paragraph {
-  padding: 0 8%;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 main {
@@ -214,7 +214,8 @@ main {
 }
 
 .about-manage {
-  padding: 8px 0 72px 0;
+  padding-top: 8px;
+  padding-bottom: 72px;
   color: var(--dark-blue);
 }
 
@@ -465,6 +466,64 @@ footer .copyright {
   color: var(--dark-grayish-blue);
 }
 
+.attribution {
+  padding: 16px 2%;
+  text-align: center;
+  font-size: 10px;
+}
+
+.attribution .flip-element {
+  display: inline-block;
+  perspective: 1400px;
+}
+
+.attribution .flip-element.mentor {
+  width: 94px;
+}
+
+.attribution .flip-element-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 600ms ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flip-element:hover .flip-element-inner {
+  cursor: pointer;
+  transform: rotateX(180deg);
+}
+
+.flip-element .flip-element-front,
+.flip-element .flip-element-back {
+  position: absolute;
+  top: -14px;
+  backface-visibility: hidden;
+}
+
+.flip-element .flip-element-front {
+  padding: 2px 4px;
+  color: var(--very-light-gray);
+  background-color: var(--very-dark-blue);
+  border-radius: 2px;
+}
+
+.flip-element .flip-element-back {
+  padding: 2px 4px;
+  color: var(--very-light-gray);
+  background-color: var(--bright-red);
+  border-radius: 2px;
+}
+
+.attribution .flip-element.author {
+  width: 82px;
+}
+
+.link-mentor,
+.link-author {
+  text-decoration: underline;
+}
+
 @media (min-width: 1024px) {
   .header-container {
     background: url(../images/bg-tablet-pattern.svg);
@@ -474,11 +533,13 @@ footer .copyright {
   }
 
   .nav-bar {
-    padding: 0 8%;
+    padding-left: 8%;
+    padding-right: 8%;
     height: 16vh;
   }
 
-  .nav-bar .menu-box-background {
+  .nav-bar .logo {
+    width: 134px;
   }
 
   .nav-bar .menu-box {
@@ -507,7 +568,8 @@ footer .copyright {
   }
 
   .intro-header {
-    padding: 0 8%;
+    padding-left: 8%;
+    padding-right: 8%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -693,5 +755,22 @@ footer .copyright {
     grid-row: 1/2;
     justify-self: end;
     align-self: end;
+  }
+
+  .attribution {
+    font-size: 12px;
+  }
+
+  .attribution .flip-element.mentor {
+    width: 110px;
+  }
+
+  .flip-element .flip-element-back {
+    top: -2px;
+    transform: rotateX(180deg);
+  }
+
+  .attribution .flip-element.author {
+    width: 96px;
   }
 }
