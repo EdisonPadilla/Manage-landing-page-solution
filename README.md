@@ -41,7 +41,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution repository](https://github.com/EdisonPadilla/Manage-landing-page-solution)
-- Live Site URL: [live site]()
+- Live Site URL: [live site](https://edisonpadilla.github.io/Manage-landing-page-solution/)
 
 ## My process
 
